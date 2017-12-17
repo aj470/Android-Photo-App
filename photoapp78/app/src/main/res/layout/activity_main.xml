@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cs213.photoapp78.MainActivity">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="368dp"
+        android:layout_height="329dp"
+        android:layout_marginTop="8dp"
+        android:choiceMode="singleChoice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/open_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="48dp"
+        android:background="#ffffff"
+        android:drawableTop="@drawable/ic_open_in_new_black_48px"
+        android:onClick="openAlbum"
+        android:text="Open"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="48dp"
+        android:background="#ffffff"
+        android:drawableTop="@drawable/ic_library_add_black_48px"
+        android:onClick="addAlbum"
+        android:text="Add"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/open_button" />
+
+    <Button
+        android:id="@+id/remove_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="48dp"
+        android:background="#ffffff"
+        android:drawableTop="@drawable/ic_delete_black_48px"
+        android:onClick="removeAlbum"
+        android:text="Remove"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_button" />
+
+    <Button
+        android:id="@+id/rename_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="24dp"
+        android:background="#ffffff"
+        android:drawableTop="@drawable/ic_edit_black_48px"
+        android:onClick="renameAlbum"
+        android:text="Rename"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/add_button"
+        app:layout_constraintStart_toEndOf="@+id/search_button"
+        app:layout_constraintTop_toBottomOf="@+id/listView" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="24dp"
+        android:background="#ffffff"
+        android:drawableTop="@drawable/ic_search_black_48px"
+        android:onClick="searchAlbums"
+        android:text="Search"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/add_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView" />
+
+</android.support.constraint.ConstraintLayout>
